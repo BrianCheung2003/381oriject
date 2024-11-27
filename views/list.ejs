@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <H1>Tourist suggestion for HK</H1>
+		<hr/>
+        <H2>Tour location suggested by others (<%= nBookings %>)</H2>
+        <ul>
+            <% for (var b of bookings) { %>
+            <li>Tourist attraction: <a href="/details?_id=<%= b._id %>"><%= b.bookingid %></a></li>
+            <% } %>
+        </ul>
+        <a href='/create'>Create a suggestion of a tourist attraction</a>
+    </body>
+</html>

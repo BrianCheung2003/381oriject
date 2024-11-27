@@ -1,0 +1,22 @@
+<html>
+    <body>
+		<H1>Tourist suggestion for HK</H1>
+		<hr/>
+        <H2>Tour location Details</H2><hr>
+        <p>Name: <%= booking.bookingid %></i></p>
+        <p>Location: <%= booking.mobile %></p>
+        <p>Details: <%= booking.location %></p>
+
+        <% if (booking.photo) { %>
+            <img src="data:image/jpg;base64, <%= booking.photo %>"><br>
+        <% } %>
+
+        <% if (booking.userid) { %>
+            <p><small>Created by User ID: <%= booking.userid %></small></p>
+        <% } %>
+        <br>
+        <a href="/edit?_id=<%= booking._id %>">edit</a><br>
+        <a href="/delete?_id=<%= booking._id %>">delete</a><br>
+        <a href="/list">home</a>
+    </body>
+</html>

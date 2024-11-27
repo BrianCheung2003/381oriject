@@ -1,0 +1,15 @@
+<html>
+    <body>
+		<H1>Tourist suggestion for HK</H1>
+		<hr/>
+        <form action="/update" method="POST" enctype="multipart/form-data">
+            Name: <input name="bookingid" value=<%= booking.bookingid %>><br>
+            Location: <input name="mobile" value=<%= booking.mobile %> /><br>
+            Details: <input name="location" value=<%= booking.location %> /><br>
+            <input type="file" name="filetoupload"><br>
+            <input type="hidden" name="_id" value=<%= booking._id %>>
+            <input type="submit" value="update">  
+        </form>
+        <a href="/list">Back to home</a>
+    </body>
+</html>
